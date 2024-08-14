@@ -51,6 +51,11 @@ android {
 
 dependencies {
 
+    implementation( "androidx.compose.ui:ui:1.0.5")
+    implementation("androidx.compose.material3:material3:1.0.0-alpha08")
+    implementation("androidx.compose.runtime:runtime-livedata:1.0.5")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha07")
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
