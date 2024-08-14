@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">LiveAndDeath</string>
     <string name="main_screen_title">Клеточное наполнение</string>
+    <string name="button_create_text">СОТВОРИТЬ</string>
 </resources>

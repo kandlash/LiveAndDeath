@@ -91,11 +91,13 @@ fun MainScreen(modifier: Modifier = Modifier, padding: PaddingValues) {
 
                 Button(
                     onClick = { viewModel.addCell() },
-                    modifier = Modifier.padding(16.dp).fillMaxWidth(0.95f),
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .fillMaxWidth(0.95f),
                     shape = RoundedCornerShape(4.dp),
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF5A3472))
                 ) {
-                    Text(text = "СОТВОРИТЬ", color = Color.White, fontSize = 22.sp)
+                    Text(text = stringResource(id = R.string.button_create_text), color = Color.White, fontSize = 22.sp)
                 }
 
             }
@@ -110,7 +112,8 @@ fun CellItem(cell: Cell) {
     Box(
         modifier = Modifier
             .padding(4.dp)
-            .fillMaxWidth().background(color = Color.White, shape = RoundedCornerShape(5.dp)),
+            .fillMaxWidth()
+            .background(color = Color.White, shape = RoundedCornerShape(5.dp)),
     ) {
         Row(
             modifier = Modifier.padding(6.dp),
@@ -144,7 +147,9 @@ fun CellItem(cell: Cell) {
 
 @Composable
 fun CellList(cells: List<Cell>) {
-    LazyColumn(modifier = Modifier.fillMaxHeight(0.95f).padding(8.dp)) {
+    LazyColumn(modifier = Modifier
+        .fillMaxHeight(0.95f)
+        .padding(8.dp)) {
         items(cells) { cell ->
             CellItem(cell = cell)
         }
